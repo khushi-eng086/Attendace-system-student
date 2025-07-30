@@ -48,3 +48,4 @@ if __name__ == '__main__':
         return render_template('dashboard.html', attendance_records=attendance_records)
     
     # Fallback for any other role or issue
+#comment 
