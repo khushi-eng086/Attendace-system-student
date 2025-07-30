@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, {{ username }}</h1>
+
+    <h2>Personal Information</h2>
+    <ul>
+        <li>Name: {{ student.name }}</li>
+        <li>Roll Number: {{ student.roll_number }}</li>
+        <li>Phone: {{ student.phone }}</li>
+    </ul>
+
+    <h2>Attendance Summary</h2>
+    <ul>
+        <li>Total Subjects: {{ student.total_subjects }}</li>
+        <li>Total Present: {{ student.total_present }}</li>
+        <li>Total Absent: {{ student.total_absent }}</li>
+    </ul>
+
+    <h2>Attendance by Subject</h2>
+    <ul>
+        {% for subject, record in student.attendance.items() %}
+            <li>{{ subject }}: {{ record }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
